@@ -1,15 +1,17 @@
 package edu.towson.cosc.cosc455.mmarti39.Project1
 
+
 /**
   * Created by Marqui on 10/11/2016.
   */
-
+import scala.io.Source._
+import scala.collection.mutable
 
 object Compiler{
 
   var currentToken : String = ""
   var fileContents : String = ""
-
+  var location: Int = 0
   val Scanner = new MyLexicalAnalyzer
   val Parser = new MySyntaxAnalyzer
   val SemanticAnalyzer = new MySyntaxAnalyzer
