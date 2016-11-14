@@ -8,10 +8,9 @@ class MyLexicalAnalyzer extends LexicalAnalyzer{
   var posit = 0
   var nextChar = ' '
   var fileCont = " "
-  var tempChar = ' '
-  var textList = List()
 
 
+  var lstFileCont = Array.empty[Char]
   var currentToken: Char = ' '
   var tokenStr= " "
   var nextTokenStr = " "
@@ -39,7 +38,7 @@ class MyLexicalAnalyzer extends LexicalAnalyzer{
   override def getNextToken(): Unit = {
 
     // it calls everything
-  while(space()|| file < fileContents.length) {
+  while((space())&& (file < fileCont.length)) {
     currentToken = getChar()
   }
   }

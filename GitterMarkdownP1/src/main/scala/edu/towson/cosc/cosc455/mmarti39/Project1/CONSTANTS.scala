@@ -9,8 +9,8 @@ object CONSTANTS {
   val TITLEB: String  = "\\TITLE["
   val BRACKETE: String = "]"
   val HEADING : String = "#"
-  val PARB   : String = "\\PARB"
-  val PARE   : String = "\\PARE"
+  val PARAB   : String = "\\PARB"
+  val PARAE   : String = "\\PARE"
   val BOLD    : String = "**"
   val ITALICS : String = "*"
   val LISTITEM: String = "+"
@@ -22,5 +22,7 @@ object CONSTANTS {
   val DEFB    : String = "\\DEF["
   val EQSIGN  : String = "="
   val USEB    : String = "\\USE["
+  val REQTEXT : String = " "
+
 
 }

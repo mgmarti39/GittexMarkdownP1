@@ -11,7 +11,7 @@ class MySyntaxAnalyzer extends SyntaxAnalyzer{
   override def gittex(): Unit = {
     if (Compiler.currentToken.equalsIgnoreCase(CONSTANTS.DOCB)) {
 
-      parseTree.push(CONSTANTS.DOCB)
+      parseTree.push(Compiler.currentToken)
 
       Compiler.Scanner.getNextToken()
 
@@ -107,14 +107,14 @@ class MySyntaxAnalyzer extends SyntaxAnalyzer{
 
 
     if (Compiler.currentToken.equalsIgnoreCase(CONSTANTS.USEB)) {
-      variableUse()
+      parseTree.push(Compiler.currentToken)
       innerText()
     } else if (Compiler.currentToken.equalsIgnoreCase(CONSTANTS.HEADING)) {
-      heading()
+      parseTree.push(Compiler.currentToken)
       innerText()
       //or
     } else if (Compiler.currentToken.equalsIgnoreCase(CONSTANTS.BOLD)) {
-      bold()
+      parseTree.push(Compiler.currentToken)
       innerText()
       //or
     } else if (Compiler.currentToken.equalsIgnoreCase(CONSTANTS.ITALICS)) {
